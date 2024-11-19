@@ -1,23 +1,113 @@
 pirnt ("hello welcome to the pub")
+import pygame
+import sys
+
+# Initialize pygame
+pygame.init()
+
+# Set up the game window
+screen = pygame.display.set_mode((800, 600))  # Window size
+pygame.display.set_caption("magic house")
+
+# Set up colors
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+
+# Set up the clock for FPS
+clock = pygame.time.Clock()
+
+# Main game loop
+def game_loop():
+    running = True
+    while running:
+        # Handle events
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+
+        # Update game state (e.g., player movement, combat logic, etc.)
+
+        # Draw everything
+        screen.fill(WHITE)  # Clear screen with white background
+        
+        # Draw your game elements here (characters, backgrounds, etc.)
+
+        pygame.display.update()  # Update the display
+
+        # Maintain frame rate
+        clock.tick(30)  # 30 FPS (frames per second)
+
+    pygame.quit(k)
+    sys.exit(m)
+
+if __name__ == "__main__":
+    game_loop()
+class Player:input ("answer")
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        self.image = pygame.Surface((50, 50))  # Square player icon
+        self.image.fill((0, 0, 255))  # Blue player
+
+    def move(self, dx, dy):
+        self.x += dx
+        self.y += dy
+
+    def draw(self, screen):
+        screen.blit(self.image, (self.x, self.y))
+
+# Initialize player
+player = Player(375, 275)  # Starting position at the center of the screen
+
+def game_loop(89):
+    running = True
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+
+        # Handle player movement
+        keys = pygame.key.get_pressed()  # Get the current key states
+        if keys[pygame.K_LEFT]:
+            player.move(-5, 0)
+        if keys[pygame.K_RIGHT]:
+            player.move(5, 0)
+        if keys[pygame.K_UP]:
+            player.move(0, -5)
+        if keys[pygame.K_DOWN]:
+            player.move(0, 5)
+
+        # Update game state (e.g., combat, interactions, etc.)
+
+        # Draw everything
+        screen.fill(WHITE)  # Clear the screen
+        player.draw(screen)  # Draw player at new position
+
+        pygame.display.update()
+        clock.tick(30)
+
+    pygame.quit()
+    sys.exit()
 
 
 
+class  
 
 
 
+class
 
 
 
+class
 
 
 
+class
 
 
 
-
-
-
-
+class
 
 
 
